@@ -31,3 +31,20 @@ def sum_double(a, b):
     return a+b
   if a == b:
     return (a+b)*2
+  
+#diff21
+#Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+#diff21(19) → 2
+#diff21(10) → 11
+#diff21(21) → 0
+def diff21(n):
+  if n<21:
+    if n-21 <0:
+      return (n-21)*-1
+    else:
+      return n-21
+  else:
+    if n-21 <0:
+      return (n-21)*-1*2
+    else:
+      return (n-21)*2
