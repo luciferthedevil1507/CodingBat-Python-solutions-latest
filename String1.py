@@ -46,3 +46,13 @@ def extra_end(str):
 #first_two('ab') → 'ab'
 def first_two(str):
   return str[:2]
+
+#first_half
+#Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+#first_half('WooHoo') → 'Woo'
+#first_half('HelloThere') → 'Hello'
+#first_half('abcdef') → 'abc'
+def first_half(str):
+  lstr = len(str)
+  hlstr = lstr//2
+  return str[:hlstr]
