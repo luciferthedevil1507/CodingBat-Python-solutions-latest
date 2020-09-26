@@ -47,3 +47,25 @@ def count_code(str):
     if str[i] == 'c' and str[i+1] == 'o' and str[i+3] == 'e':
       counter += 1
   return counter
+
+#end_other
+#Given two strings, return True if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be "case sensitive"). Note: s.lower() returns the lowercase version of a string.
+#end_other('Hiabc', 'abc') → True
+#end_other('AbC', 'HiaBc') → True
+#end_other('abc', 'abXabc') → True
+def end_other(a, b):
+  a = a.lower()
+  b = b.lower()
+  if a.endswith(b) or b.endswith(a):
+    return True
+  else:
+    return False
+  
+#xyz_there
+#Return True if the given string contains an appearance of "xyz" where the xyz is not directly preceeded by a period (.). So "xxyz" counts but "x.xyz" does not.
+#xyz_there('abcxyz') → True
+#xyz_there('abc.xyz') → False
+#xyz_there('xyz.abc') → True
+def xyz_there(str):
+  return str.count('.xyz') != str.count('xyz')
+
